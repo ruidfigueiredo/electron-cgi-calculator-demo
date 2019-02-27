@@ -1,0 +1,25 @@
+{
+  "name": "calculator-demo",
+  "version": "1.0.0",
+  "description": "Calculator demo using electron-cgi",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/ruidfigueiredo/electron-cgi-calculator-demo",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.0.4"
+  },
+  "dependencies": {
+    "electron-cgi": "0.0.2"
+  }
+}

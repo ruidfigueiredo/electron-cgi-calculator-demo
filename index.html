@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ElectronCgi Demo</title>
+    <link href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="calculator">
+      <div class="result-container">
+        <span id="result">0</span>
+        <span id="operation"></span>
+      </div>
+      <button data-operation="+">+</button>
+      <button data-operation="-">-</button>
+      <button data-operation="*">&times;</button>
+      <button data-operation="/">/</button>
+
+      <button id="equals" data-operation="=">=</button>
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+
+      <button data-value="0">0</button>
+      <button id="clear" data-operation="clear">C</button>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
