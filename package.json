@@ -20,6 +20,6 @@
     "electron": "^4.0.4"
   },
   "dependencies": {
-    "electron-cgi": "0.0.2"
+    "electron-cgi": "0.0.5"
   }
 }

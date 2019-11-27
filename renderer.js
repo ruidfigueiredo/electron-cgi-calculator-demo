@@ -8,12 +8,17 @@ let _selectedOperation = null;
 
 const { ConnectionBuilder } = require('electron-cgi');
 
-let _connection = new ConnectionBuilder().connectTo('dotnet', 'run', '--project', 'DotNetCalculator').build();
+let _connection = null;
 
-_connection.onDisconnect = () => {
-    alert('Connection lost, restarting...');
+function setupConnectionToRestartOnConnectionLost() {
     _connection = new ConnectionBuilder().connectTo('dotnet', 'run', '--project', 'DotNetCalculator').build();
-};
+    _connection.onDisconnect = () => {
+        alert('Connection lost, restarting...');
+        setupConnectionToRestartOnConnectionLost();
+    };
+}
+
+setupConnectionToRestartOnConnectionLost();
 
 function reset() {
     _num1 = 0;
